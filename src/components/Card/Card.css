@@ -1,0 +1,132 @@
+.card_bg{
+    padding: 0px 10px;
+    margin-top: 20px;
+}
+
+.card-container {
+	background-color: #000000;
+	border-radius: 0px;
+	box-shadow: 10px 10px 20px -6px rgba(0,0,0,0.75);
+	color: #909090;
+	padding-top: 15px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+
+.star{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+
+.star:hover{
+    cursor: pointer;
+}
+
+
+.card-container img{
+    height: 100px;
+    width: 100px;
+    filter: invert(1);
+}
+
+.card-container .round {
+	border: 2px dashed #000000;
+	border-radius: 50%;
+	padding: 5px;
+    display: inline-block;
+}
+
+.card-container h3 {
+	margin: 5px 0;
+    font-size: 20px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #ff59f0f0;
+}
+
+.card-container h6 {
+	margin: 5px 0;
+	text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-container p {
+	font-size: 13px;
+	line-height: 18px;
+    padding: 0 5px;
+    font-family: "IBM Plex Sans", sans-serif;
+    height: 100px;
+}
+
+.section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sub_section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 135px;
+}
+
+.sub_section h5{
+    display: inline-block;
+    font-size: 13px;
+    color :#ff59f0f0;
+}
+
+.social_links{
+    height: 44px;
+    margin-top: 10px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social_buttons a{
+    text-decoration: none;
+    color: #909090;
+}
+
+.social_button a:hover{
+    cursor: pointer;
+}
+
+.skills {
+	background-color: #000000;
+	text-align: left;
+	padding: 15px;
+	margin-top: 5px;
+    color: #ff59f0f0;
+    height: 150px;
+}
+
+.skills ul {
+	list-style-type: none;
+	margin-top: 10px;
+	padding: 0;
+}
+
+.skills ul li {
+	border: 1px solid #909090;
+	border-radius: 15px;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0 7px 7px 0;
+	padding: 7px;
+    color: #909090;
+}
+
+@media only screen and (max-width: 400px) {
+    .card_bg {
+      margin: 10px 0px;
+    }
+}

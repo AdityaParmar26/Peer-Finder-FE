@@ -1,0 +1,377 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+  }
+  
+  .home_page {
+    font-family: "IBM Plex Sans", sans-serif;
+    /* font-family: 'Julee', cursive; */
+  }
+  
+  .name {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
+  }
+  
+  .name h4 {
+    letter-spacing: 2px;
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 8px 8px 10px #000000a6;
+  }
+  
+  /* Hamburger Menu Styling  */
+  
+  .hamburger_menu {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+  }
+  
+  .line {
+    z-index: 1000;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+  }
+  
+  /* Header Styling  */
+  
+  .header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+  }
+  
+  .img_wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #d2ccc4, #2f4353);
+    overflow: hidden;
+  }
+  
+  .img_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    animation: scaleChange 20s;
+  }
+  
+  @keyframes scaleChange {
+    0% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .banner {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    font-family: "Courgette";
+  }
+  
+  .banner h1 {
+    line-height: 40px;
+    opacity: 0;
+    animation: moveItems 2s 0.5s forwards;
+    font-weight: 700;
+  }
+  
+  .banner p {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 80px;
+    opacity: 0;
+    animation: moveItems 2s 0.7s forwards;
+  }
+  
+  .sign_up_btn {
+    text-transform: capitalize;
+    width: 110px;
+    height: 40px;
+    background-color: #d2ccc4;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: 2px solid black;
+    margin-right: 12px;
+    opacity: 0;
+    animation: moveItems 2s 0.9s forwards;
+    font-size: 18px;
+    font-family: "Courgette";
+  }
+  
+  .sign_in_btn {
+    text-transform: capitalize;
+    width: 110px;
+    height: 40px;
+    background-color: #437ca5;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    border: 2px solid black;
+    opacity: 0;
+    animation: moveItems 2s 0.9s forwards;
+    font-size: 18px;
+    font-family: "Courgette";
+  }
+  
+  .banner a {
+    color: black;
+  }
+  
+  .sign_up_btn:hover {
+    background-color: #b9b4ae;
+  }
+  
+  .sign_in_btn:hover {
+    background-color: #386686;
+  }
+  
+  .banner a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  
+  @keyframes moveItems {
+    0% {
+      transform: translateY(400px) rotateY(-20deg);
+    }
+    100% {
+      transform: translateY(0) rotateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* SideBar Styling  */
+  
+  .sidebar {
+    width: 350px;
+    height: 90vh;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    background-color: white;
+    opacity: 0;
+    animation: showSidebar 0.7s 0.1s forwards;
+    transition: all 0.3s linear;
+    border-radius: 30px;
+    margin-top: 40px;
+  }
+  
+  @keyframes showSidebar{
+    0%{
+      transform: translateX(500px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(-10px);
+      opacity: 1;
+    }
+  }
+
+  .sidebarImg{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sidebarImg img{
+    height: 120px;
+  }
+
+  .sidebar_head{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #162535;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  .menu {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu_item {
+    text-align: center;
+    margin: 7px 0 5px 0;
+  }
+
+  .menu_item div{
+    width: 300px;
+    border: 2px solid #d7e1ec;
+    border-radius: 10px;
+    background-color: #162535;
+  }
+  
+  .menu_link {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 30px;
+    color: #d7e1ec;
+    text-transform: uppercase;
+  }
+  
+  .menu_link:hover {
+    color: #acb4bd;
+    text-decoration: none;
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 10%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: black;
+  }
+
+  .buttons button{
+    margin-left: 5px;
+    margin-right: 5px;
+    text-transform: capitalize;
+    width: 75px;
+    height: 35px;
+    background-color: #162535;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2 2 2 2;
+    border: 2px solid #162535;
+    font-size: 15px;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .sidebar_buttons{
+    color: #d7e1ec;
+  }
+
+  /* Responsiveness  */
+
+@media only screen and (max-width: 700px) {
+  .banner {
+    left: 5%;
+  }
+  .banner h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .banner p {
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .sign_in_wrapper,
+  .sign_up_wrapper {
+    margin: 0 10px 0 10px;
+  }
+  .sign_up_form_head h1 {
+    font-size: 28px;
+  }
+  .sign_up_profile1_head h1{
+    font-size: 38px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .sign_up_btn {
+    width: 90px;
+    height: 33px;
+    font-size: 17px;
+  }
+  
+  .sign_in_btn {
+    width: 90px;
+    height: 33px;
+    font-size: 17px;
+  }
+  
+  .sign_in_form_head h1 {
+    font-size: 34px;
+  }
+  .sign_in_form,
+  .sign_up_form {
+    padding: 30px 10px 0px 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .name {
+    top: 18px;
+    left: 10px;
+  }
+  .change .name {
+    z-index: 0;
+  }
+
+  .name h4{
+    font-size: 25px;
+  }
+
+  .hamburger_menu {
+    top: 20px;
+    right: 20px;
+  }
+  .banner {
+    left: 3%;
+  }
+  .banner h1 {
+    font-size: 26px;
+  }
+  .banner p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .sidebar {
+    height: 100vh;
+    border-radius: 0px;
+     margin-top: 0px;
+    /*margin: 40px 0px 0px 10px; */
+  }
+  .sign_in_form_head h1,
+  .sign_up_form_head h1 {
+    font-size: 25px;
+  }
+  .sign_up_profile1_head h1{
+    font-size: 31px;
+  }
+  .create_account,
+  .login_account {
+    font-size: 14px;
+  }
+  @keyframes showSidebar{
+    0%{
+      transform: translateX(500px);
+      opacity: 0;
+    }
+    100%{
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+}

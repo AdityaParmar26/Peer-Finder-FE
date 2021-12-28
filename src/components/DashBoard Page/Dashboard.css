@@ -1,0 +1,91 @@
+.render_element{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+
+.dashboard_wrapper{
+    height: 100%;
+    background-color: #ebebeb;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.search_box{
+    margin: 30px 20px 0px 20px;
+    padding: 30px 20px 10px 20px;
+    background-color: #e7e7e7;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: 10px 10px 10px 0px rgb(187, 187, 187);
+    border-radius: 15px;
+    height: 88vh;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.search_box::-webkit-scrollbar {
+    display: none;
+}
+
+.search_box div h1{
+    font-size: 29px;
+    font-weight: 800;
+}
+
+.search_bar{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.search_bar .form-group{
+    width: 93%;
+}
+
+.search_box_message{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_cards{
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .search_bar .form-group{
+        width: 89%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .search_bar .form-group{
+        width: 84%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .search_box_message div h4{
+        font-size: 15px;
+    }
+
+    .search_box{
+        margin: 30px 10px 0px 10px;
+        padding: 30px 10px 10px 10px;
+    }
+    
+    .search_bar .form-group{
+        width: 70%;
+    }
+
+    .search_box div h1{
+        font-size: 22px
+    }
+}

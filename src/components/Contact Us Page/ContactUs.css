@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+  }
+  
+  /* Sign In And Sign Up Page Styling  */
+  
+  .sign_in_page,
+  .contact_us_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #f1ebe2, #547692);
+    font-family: "Baloo 2", cursive;
+  }
+  
+  .sign_in_wrapper,
+  .contact_us_wrapper {
+    margin: 0 30px 0 30px;
+    background-image: linear-gradient(90deg, #d2ccc4, #2f4353);
+    height: 330px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #19547bc2;
+    transition: all 0.2s linear;
+  }
+  
+  .contact_us_wrapper {
+    height: 380px;
+  }
+  
+  .sign_in_wrapper:hover,
+  .contact_us_wrapper:hover {
+    box-shadow: 6px 6px 15px #19547bc2;
+  }
+  
+  .set_profile1_wrapper{
+    height: 600px;
+    width: 800px;
+  }
+  
+  .contact_us_form,
+  .sign_up_form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30px 40px 0px 40px;
+  }
+  
+  .contact_us_form_head,
+  .contact_us_form_head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  textarea { 
+    resize:none;
+  }
+  
+  .btn {
+    background-color: #268dd1;
+    border: 1px solid #268dd1;
+  }
+  
+  .create_account,
+  .message {
+    text-align: left;
+    position: absolute;
+    bottom: 8px;
+    color: rgba(0, 0, 0, 0.61);
+    line-height: 1;
+  }
+  
+  /* Responsiveness  */
+  
+  @media only screen and (max-width: 900px) {
+    .banner {
+      left: 9%;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .banner {
+      left: 5%;
+    }
+    .banner h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    .banner p {
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .sign_in_wrapper,
+    .contact_us_wrapper {
+      margin: 0 10px 0 10px;
+    }
+    .contact_us_form_head h1 {
+      font-size: 28px;
+    }
+    .sign_up_profile1_head h1{
+      font-size: 38px;
+    }
+    .message{
+      bottom: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .sign_up_btn {
+      width: 90px;
+      height: 33px;
+      font-size: 17px;
+    }
+    
+    .sign_in_btn {
+      width: 90px;
+      height: 33px;
+      font-size: 17px;
+    }
+    
+    .contact_us_form_head h1 {
+      font-size: 34px;
+    }
+    .contact_us_form,
+    .sign_up_form {
+      padding: 30px 10px 0px 10px;
+    }
+
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .name {
+      top: 18px;
+      left: 10px;
+    }
+    .change .name {
+      z-index: 0;
+    }
+    .hamburger_menu {
+      top: 20px;
+      right: 20px;
+    }
+    .banner {
+      left: 3%;
+    }
+    .banner h1 {
+      font-size: 26px;
+    }
+    .banner p {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .sidebar {
+      width: 100%;
+    }
+    .contact_us_form_head h1,
+    .contact_us_form_head h1 {
+      font-size: 25px;
+    }
+    .sign_up_profile1_head h1{
+      font-size: 31px;
+    }
+  }
+  

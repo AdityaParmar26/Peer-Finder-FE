@@ -1,0 +1,32 @@
+.render_element{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slider_wrapper{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slider_content{
+    margin: auto;
+}
+
+.slick-prev,
+.slick-next{
+   display: none !important;;
+}
+
+.slick-dots{
+    width: 376px !important;
+}
+
+@media only screen and (max-width: 376px) {
+    .slick-dots{
+        width: 100% !important;
+    }
+}
