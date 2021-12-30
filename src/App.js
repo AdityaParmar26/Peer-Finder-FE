@@ -13,6 +13,8 @@ import Profile from './components/Profile Page/Profile';
 import Interest from './components/Interest Page/Interest';
 import EditProfile from './components/Edit Profile Page/EditProfile';
 import Favourite from './components/Favourite Page/Favourite';
+import Inbox from './components/Inbox Page/Inbox';
+import MessageCard from './components/Message Card/MessageCard';
 
 const App = () =>{
   return(
@@ -29,6 +31,8 @@ const App = () =>{
       <Route exact path="/home"><Dashboard /></Route>
       <Route exact path="/edit/profile"><EditProfile /></Route>
       <Route exact path="/favourites"><Favourite /></Route>
+      <Route exact path="/inbox"><Inbox /></Route>
+      <Route exact path="/inboxcard"><MessageCard /></Route>
     </>
   ); 
 }

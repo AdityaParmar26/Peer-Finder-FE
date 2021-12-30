@@ -25,6 +25,16 @@
     cursor: pointer;
 }
 
+.message{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+.message:hover{
+    cursor: pointer;
+}
+
 
 .card-container img{
     height: 100px;

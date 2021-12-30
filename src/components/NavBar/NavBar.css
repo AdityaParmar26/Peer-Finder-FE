@@ -1,13 +1,13 @@
 .navbar_head{
-    margin-left: 30px;
+    margin-left: 40px;
 }
 
 .mr-auto{
-    margin-left: 60px;
+    margin-left: 20px;
 }
 
 .nav_links{
-    margin: 0px 12px;
+    margin: 0px 7px;
     color: black;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .navbar_button{
-    margin: 0px 10px;
+    margin: 0px 8px;
 }
 
 .navbar_button a{
@@ -31,8 +31,12 @@
     text-decoration: none;
 }
 @media only screen and (max-width: 1040px) {
+    .navbar_head{
+        margin-left: 15px;
+    }
+
     .mr-auto{
-        margin-left: 20px;
+        margin-left: 10px;
     }
 }
 

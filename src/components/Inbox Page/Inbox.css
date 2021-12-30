@@ -1,0 +1,24 @@
+.render_element{    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.inbox{
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 30px 20px 0px 20px;
+    padding: 30px 20px 10px 20px;
+    background-color: #e7e7e7;
+    border: 1px solid rgb(187, 187, 187);
+    box-shadow: 10px 10px 10px 0px rgb(187, 187, 187);
+    border-radius: 15px;
+    height: 88vh;
+}
+
+.inbox::-webkit-scrollbar {
+    display: none;
+}

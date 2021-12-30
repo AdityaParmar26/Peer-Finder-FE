@@ -7,10 +7,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import {Button} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
+import Modal from '../Modal/Modal';
 
 const Card = (props) => {
 
     const history = useHistory();
+
+    const handleCallback = ()=>{
+
+    }
 
     // --------------- for favourite feature ----------------
 
@@ -133,6 +138,10 @@ const Card = (props) => {
                 {
                     renderContent()
                 }
+            </div>
+
+            <div className="message">
+                <Modal user={props.user} style={{backgroundColor : "#a0a0a0"}} reply={false} obj={props.obj}/>
             </div>
             <div className="card-container-image">
                 <img className="round" src={user_image} alt="user" />

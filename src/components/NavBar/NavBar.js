@@ -22,6 +22,7 @@ const NavBar = () => {
           <Nav.Link className="nav_links" as={Link} to="/home">Home</Nav.Link>
           <Nav.Link className="nav_links" as={Link} to="/user">Profile</Nav.Link>
           <Nav.Link className="nav_links" as={Link} to="/interests">Your Peers</Nav.Link>
+          <Nav.Link className="nav_links" as={Link} to="/inbox">Inbox</Nav.Link>
           <Nav.Link className="nav_links" as={Link} to="/favourites">Favourites</Nav.Link>
           <Nav.Link className="nav_links" as={Link} to="/contact">Contact</Nav.Link>
         </Nav>

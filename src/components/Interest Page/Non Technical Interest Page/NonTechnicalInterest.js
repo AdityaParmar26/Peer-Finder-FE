@@ -26,62 +26,62 @@ const NonTechnicalInterest = () => {
     }
 
     const callNonTechnicalPage = async ()=>{
-        try {
-          const res = await fetch("https://api-peer-finder.herokuapp.com/search/non-technical", {
-            method: "GET",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-              "token" : localStorage.getItem('token')
-            },
-            credentials: "include",
-          });
-          const response = await res.json();
+      try {
+        const res = await fetch("https://api-peer-finder.herokuapp.com/search/non-technical", {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            "token" : localStorage.getItem('token')
+          },
+          credentials: "include",
+        });
+        const response = await res.json();
 
-        if(response.status === false){
-          // for not getting multiple calls to api
-          setLenChek(1);
+      if(response.status === false){
+        // for not getting multiple calls to api
+        setLenChek(1);
 
-          handleCallback({
-            message : response.message,
-            error : true
-          });
+        handleCallback({
+          message : response.message,
+          error : true
+        });
 
-          if(response.message === "Set up your profile"){
-            setTimeout(() => {
-              history.push("/profile");
-            }, 1000);
-          }
-          else if(response.message === "Please verify your identity"){
-            setTimeout(() => {
-              history.push("/otp");
-            }, 1000);
-          }
-          else if(response.message === "Authentication failed."){
-            setTimeout(() => {
-              history.push("/login");
-            }, 1000);
-          }
+        if(response.message === "Set up your profile"){
+          setTimeout(() => {
+            history.push("/profile");
+          }, 1000);
         }
-        else{
-            setLenChek(response.data.length);
-            await response.data.map(item =>{
-            return setUser((user) => [...user, item]);
-          });
-          setLoader(true);
+        else if(response.message === "Please verify your identity"){
+          setTimeout(() => {
+            history.push("/otp");
+          }, 1000);
         }
-          
-        } 
-        catch (error) {
-          handleCallback({
-            message : "Some error occurred",
-            error : true
-          });
+        else if(response.message === "Authentication failed."){
           setTimeout(() => {
             history.push("/login");
           }, 1000);
         }
       }
+      else{
+          setLenChek(response.data.length);
+          await response.data.map(item =>{
+          return setUser((user) => [...user, item]);
+        });
+        setLoader(true);
+      }
+        
+      } 
+      catch (error) {
+        handleCallback({
+          message : "Some error occurred",
+          error : true
+        });
+        setTimeout(() => {
+          history.push("/login");
+        }, 1000);
+      }
+    }
     
       useEffect(() => {
         if(loader === false && lenCheck === 0) callNonTechnicalPage();
