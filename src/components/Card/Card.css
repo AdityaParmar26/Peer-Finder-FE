@@ -135,6 +135,23 @@
     color: #909090;
 }
 
+.rating{
+    height: 50px;
+}
+
+.rating div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+.rating h5{
+    font-size: 20px;
+    color: #ff59f0f0;
+}
+
 @media only screen and (max-width: 400px) {
     .card_bg {
       margin: 10px 0px;

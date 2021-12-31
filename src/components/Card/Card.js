@@ -8,16 +8,11 @@ import {Button} from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import Modal from '../Modal/Modal';
+import Rate from '../Rating/Rating';
 
 const Card = (props) => {
 
     const history = useHistory();
-
-    const handleCallback = ()=>{
-
-    }
-
-    // --------------- for favourite feature ----------------
 
     const addFavourite = async (id, from) =>{
         try {
@@ -202,6 +197,19 @@ const Card = (props) => {
                     ))}
                 </ul>
             </section>
+
+            <div className="rating">
+                {(props.user.is_rated === false)
+                    ?
+                    <div>
+                        <h5>Rate Me</h5> 
+                        <Rate user = {props.user} interest={props.interest} obj={props.obj}/>
+                    </div>
+                    :
+                    null
+                }
+                
+            </div>
         </div>
     </div>
   );
