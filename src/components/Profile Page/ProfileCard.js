@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Load from "../Loader/Loader";
 import EditIcon from '@mui/icons-material/Edit';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
 
 const ProfileCard = (props) => {
 
@@ -23,7 +24,10 @@ const ProfileCard = (props) => {
     github_url: "",
     technical_interest : [], 
     non_technical_interest: [], 
-    cultural_interest: []
+    cultural_interest: [],
+    tech_rate : "",
+    non_tech_rate: "",
+    cultural_rate : ""
   });
   const history = useHistory();
 
@@ -149,6 +153,34 @@ const ProfileCard = (props) => {
               { user["cultural_interest"].map((value)=>(
                 <span className="profile_info_subhead user_interests" key={value}>{value}</span>
               ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="profile_rating">
+          <h3 style={{textDecoration : "underline"}}>Your Ratings</h3>
+          <div className="profile_rating_info">
+            <div className="profile_rating_head">
+              Technical -
+            </div>
+            <div className="profile_rating_sub_head">
+              {user.tech_rate} <StarBorderIcon />
+            </div>
+          </div>
+          <div className="profile_rating_info">
+            <div className="profile_rating_head">
+                Non-Technical -
+            </div>
+            <div className="profile_rating_sub_head">
+              {user.non_tech_rate} <StarBorderIcon />
+            </div>
+          </div>
+          <div className="profile_rating_info">
+            <div className="profile_rating_head">
+                Cultural -
+            </div>
+            <div className="profile_rating_sub_head">
+                {user.cultural_rate} <StarBorderIcon /> 
             </div>
           </div>
         </div>
