@@ -199,15 +199,12 @@ const Card = (props) => {
             </section>
 
             <div className="rating">
-                {(props.user.is_rated === false)
-                    ?
-                    <div>
-                        <h5>Rate Me</h5> 
-                        <Rate user = {props.user} interest={props.interest} obj={props.obj}/>
-                    </div>
-                    :
-                    null
-                }
+                
+                <div>
+                    {(props.user.rating === 0) ? <h5>Rate Me</h5> : null}
+                    <Rate user = {props.user} interest={props.interest} obj={props.obj}/>
+                </div>
+                    
                 
             </div>
         </div>

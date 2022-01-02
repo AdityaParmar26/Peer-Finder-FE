@@ -13,7 +13,9 @@ const useStyles = makeStyles((theme) => ({
 export default function Rate(props) {
   const classes = useStyles();
   const history = useHistory();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(props.user.rating);
+
+  // if(props.user.rating > 0) setValue(props.user.rating);
 
   const postData = async(val)=>{    
     try {
@@ -34,7 +36,6 @@ export default function Rate(props) {
           message : response.message,
           error : false
         });
-        window.location.reload();
       }
       else{
         props.obj({
