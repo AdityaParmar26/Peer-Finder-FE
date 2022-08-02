@@ -102,9 +102,9 @@ const ContactUsForm = (props) => {
         <button type="submit" className="btn btn-primary" onClick={postData} disabled={isDisabled}>
           Submit
         </button>
-        <p className="message">
+        {/* <p className="message">
           Give you valuable Feedback here. Suggestions are welcomed.
-        </p>
+        </p> */}
       </form>
     </div>
   );
